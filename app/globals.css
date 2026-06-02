@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  background: #050711;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #050711;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(85, 243, 255, 0.11), transparent 28rem),
+    radial-gradient(circle at 82% 8%, rgba(255, 184, 107, 0.08), transparent 24rem),
+    radial-gradient(circle at 68% 82%, rgba(72, 241, 168, 0.08), transparent 26rem),
+    #050711;
+  color: #f8fbff;
+  font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+body::before {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 82%);
+}
+
+body::after {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background:
+    linear-gradient(transparent 0%, rgba(85, 243, 255, 0.035) 50%, transparent 100%);
+  background-size: 100% 8px;
+  mix-blend-mode: screen;
+  opacity: 0.26;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(85, 243, 255, 0.26);
+  color: #ffffff;
+}
+
+.noise {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.03), transparent 30%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 3px);
+  mix-blend-mode: overlay;
+}
+
+.glass-panel {
+  position: relative;
+  border: 1px solid rgba(180, 216, 255, 0.16);
+  background:
+    linear-gradient(135deg, rgba(13, 17, 29, 0.72), rgba(13, 17, 29, 0.38)),
+    rgba(255, 255, 255, 0.035);
+  box-shadow:
+    0 18px 72px rgba(0, 0, 0, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+}
+
+.holo-edge {
+  position: relative;
+  overflow: hidden;
+}
+
+.holo-edge::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(85, 243, 255, 0.86),
+    rgba(168, 85, 247, 0.5),
+    rgba(72, 241, 168, 0.66),
+    rgba(255, 184, 107, 0.45)
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
