@@ -51,7 +51,7 @@ export const projects = [
     github: "https://github.com/haffey041707/Aiba-Virtual-Ai-Assistant"
   },
   {
-    title: "AI Birthday Experience",
+    title: "Birthday-Gift-Behan",
     badge: "Project 02",
     description:
       "AI-powered birthday platform featuring robotic voice wishes, animated gift box visuals, personalized interactions, and modern UI animations.",
