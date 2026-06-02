@@ -2,6 +2,8 @@
 
 Ultra-premium AI engineering portfolio for Muhammad Hafeez, built with Next.js 15, React 19, TypeScript, TailwindCSS, Framer Motion, Three.js, React Three Fiber, Drei, GSAP-ready dependencies, Lenis smooth scroll, and a shadcn-inspired component base.
 
+Live website: `https://muhammad-hafeez.vercel.app`
+
 ## License
 
 All rights reserved. This project is public for viewing and portfolio review only. The code, design, visuals, text, and assets may not be copied, reused, modified, redistributed, or deployed without written permission from Muhammad Hafeez.
